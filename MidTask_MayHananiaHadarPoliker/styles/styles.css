@@ -1,0 +1,638 @@
+﻿html {
+    font-size: 16px;
+    direction: rtl;
+    text-align: right;
+}
+
+/* הגדרות עיצוב לקונטיינר */
+.container {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  
+/* עיצוב החלק המרכזי */
+main,#ourProdectSlide {
+    padding: 1rem 2rem 1rem 2rem;
+}
+
+/* עיצוב כפתור המבורגר וכפתור סגירה */
+.btn-mobile {
+    border: none;
+    background: none;
+    padding: .5rem;
+}
+
+/* כפתור סגירת תפריט */
+#close-nav-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.btn-mobile img {
+    width: 2rem;
+}
+
+/* תפריט ניווט */
+/* עימוד בטור במובייל */
+.flex-container-nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-color: #125076;
+    flex-direction: column;
+    padding: 1rem 0;
+
+    position: fixed;
+    height: auto;
+    width: 50%;
+    padding-top: 3rem;
+    
+}
+
+/* תמונות הלגו של אמרל בתוך הניווט */
+#nav-logo{
+    max-width: 40%;
+    height: auto;
+}
+
+/* עיצוב פריטי התפריט */
+.flex-container-nav li {
+    margin-bottom: 1rem;
+    align-items: right;
+}
+
+/* לא נרצה שמתחת לפריט התחתון יהיה רווח */
+.flex-container-nav li:last-child {
+    margin-bottom: 0;
+}
+
+
+.flex-container-nav li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* אפקט מעבר עכבר על הרשימת ניווט */
+
+.flex-container-nav li:hover a {
+    text-decoration: underline;
+
+}
+
+/* הצגת תפריט המבורגר במובייל */
+.btn-mobile {
+    display: block;
+}
+
+/* הסתרת התפריט במובייל */
+.flex-container-nav.hide-mobile {
+    display: none;
+}
+
+/* עיצוב קוביות התוכן */
+.flex-container-subjects {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+  
+/* הגדרות עיצוב לקוביות התוצרים של אמרל */
+#topics-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  
+  #topics-list li {
+    width: 8rem;
+    height: 8rem;
+    text-align: center;
+    list-style-type: none;
+    padding: 10px;
+    display: flex;
+    flex-direction: column; /* מסדר את התוצרים בעמודות  */
+    align-items: center;
+    justify-content: center; 
+    background-color: #00456B;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    flex: 0 0 calc(20% - 20px);
+    box-sizing: border-box;
+    margin-bottom: 20px;
+  }
+  
+  #topics-list li img {
+    max-width: 30% ; 
+    margin-bottom: 10px;
+  }
+
+  #topics-list :hover  {
+background-color: #92AEBD;
+}
+  
+  /* הגדרות עיצוב למסכים קטנים */
+  @media only screen and (max-width: 767px) {
+    #topics-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  
+    #topics-list li {
+      width: auto;
+    }
+  }
+
+.flex-container-subjects li {
+    width: 8rem;
+    height: 8rem;
+    margin: 0.5rem;
+    background-color: #720A6E;
+    border-radius: 10%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: white;
+
+    /* נגדיר כל פריט ברשימה כ */
+    /* flex */
+    /* ונמרכז את הטקסט שבתוכו */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.img-wrapper {
+    margin-top: 2rem;
+    text-align: center;
+    max-width: 100%;
+}
+
+
+
+/* הגדרות כלליות - כותרות ופסקאות */
+h1 {
+    font-size: 2rem;
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+}
+
+/* רקע ניווט במובייל ישאר בצבע כחול */
+nav{
+    background-color: #051E32;
+}
+
+/* מטפל בגודל הסטריף לאורך כל המסך */
+#strip{
+    width: 100%;
+}
+
+
+
+/* הגדרות במסכים ברוחב מעל 768 פיקסל */
+@media only screen and (min-width: 768px) {
+    html {
+        font-size: 24px;
+        
+    }
+
+    /* הגדרות עיצוב לכפתור החשך/האר מסך במסך גדול*/
+  #darkModeToggle {
+
+    position: absolute;
+    left: 10px; 
+    top: 10px; 
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #203547;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 22px;
+    border: 1px solid white;
+  }
+
+
+    /* הסתרת תפריט המבורגר במסך גדול */
+    .btn-mobile {
+        display: none;
+    }
+
+
+
+    /* עימוד התפריט בשורה במסך גדול ושינוי צבע */
+    .flex-container-nav {
+        flex-direction: row;
+        padding: 0rem;
+        background-color: #051E32;
+
+        position: relative;
+        height: auto;
+        width: 100%;
+        top: 0;
+    }
+
+    #nav-logo{
+        max-width: 10%;
+        height: auto;
+    }
+
+    /* הצגת התפריט פתוח במסך גדול */
+    .flex-container-nav.hide-mobile {
+        display: flex;
+    }
+
+    /* עיצוב פריטי התפריט */
+    .flex-container-nav li {
+        margin-left: 1rem;
+        margin-bottom: 0;
+    }
+
+   /* טקסט סליידר תמונות במסך גדול */
+.text {
+    color: #fff;
+    font-size: 25px;
+    font-weight: bold;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background-color: #00000027 ;
+  
+  }
+
+  /* זכויות יוצרים בגדול */
+  footer p{
+    background-color: #051E32;
+    color: white;
+    font-size: 12px;
+}
+
+
+  /* טקסט המספור של הסליידר  */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+    /* אפקט מעבר עכבר על הרשימת ניווט */
+
+.flex-container-nav li:hover a {
+    text-decoration: underline;
+
+}
+
+    
+    .flex-container-subjects li {
+        margin: 2rem;
+        background-color: #199990;
+    }
+
+    /* תמונות בתחתית המסך */
+    .flex-container-images {
+        align-items: flex-end;
+        flex-direction: row;
+    }
+
+
+
+    /* במסך גדול כותרת לא ממורכזת */
+    h1 {
+        text-align: right;
+    }
+/* פופ אפ של צור קשר במסך גדול */
+    .popup{
+    
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #D9D9D9;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+        max-width: 400px; 
+        width: 60%; 
+        height: auto;
+    }
+    
+
+
+    /* הגדרות עיצוב לצור קשר */
+/* הגדרות עיצוב לכפתור צור קשר  */
+.connect-btn {
+
+    background-color: #203547;
+    color: white;
+    text-align: center;
+    padding: 14px 20px 14px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    position: fixed;
+    left: 18px;
+    top: 65vh;
+    transform-origin: left center;
+    transform: translateY(-50%) rotate(-90deg);
+}
+.connect-btn:hover {
+    background-color: #92AEBD;
+}
+}
+
+
+@media only screen and (max-width: 700px) {
+        /* הגדרות עיצוב לכפתור החשך/האר מסך במסך קטן*/
+  
+          #darkModeToggle {
+
+            position: absolute;
+            left: 10px; 
+            top: 10px; 
+            padding: 5px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background-color: #203547;
+            color: #ffffff;
+            font-size: 16px;
+            border-radius: 22px;
+            border: 1px solid white;
+          }
+/* הגדרות פופ אפ למובייל */
+          .popup{
+    
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #D9D9D9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+            max-width: 800px; 
+            width: 80%; 
+            height: auto;
+        }
+
+        .text {
+            color: #fff;
+            font-size: 15px;
+            font-weight: bold;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+            background-color: #00000027;
+        }
+
+          /* זכויות יוצרים בקטן */
+  footer p{
+    background-color: #051E32;
+    color: white;
+    font-size: 10px;
+}
+       
+.numbertext {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+
+/* הגדרות עיצוב לצור קשר */
+
+.connect-btn {
+
+
+    background-color: #203547;
+    color: white;
+    border: none;
+    border-radius: 100%;
+    cursor: pointer;
+    position: fixed;
+    left: 5px;
+    bottom: 45px;
+    transform-origin: right center;
+    z-index: 55;
+    aspect-ratio: 1;
+}
+.connect-btn:hover {
+    background-color: #92AEBD;
+}
+          
+        }
+
+/* הגדרות עיצוב למצב בהיר */
+.light-mode {
+    background-color: #ffffff;
+    color: #333333;
+  }
+  
+  
+  /* הגדרות עיצוב למצב החשך */
+  .dark-mode {
+    background-color: #333333;
+    color: #ffffff;
+    
+  }
+  
+  
+
+  /* שינוי הטקסט וצבע רקע למצב חשוך */
+  .dark-mode #darkModeToggle {
+    background-color: #ffffff; 
+    color: #333333; 
+  }
+
+  .dark-mode .client-carousel{
+    background-color: white;
+    opacity: 0.5;
+}
+
+
+
+  /* קרוסלה עבור הלקוחות שלנו*/
+.client-carousel {
+    overflow: hidden;
+    width: 100%;
+    height: 100px; 
+    white-space: nowrap;
+}
+
+main, #clients,#mainTitle{
+    padding: 1rem 2rem 1rem 2rem;
+
+}
+
+.client-logos {
+    display: inline-block;
+    animation: moveLogos 60s linear infinite;
+}
+
+.client-logos img {
+    margin-right: 40px; 
+}
+
+@keyframes moveLogos {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+
+/* הגדרות עיצוב לעליית הפופ אפ */
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 1000; 
+}
+
+
+
+/* הגדרות עיצוב לכפתור סגירה של הפופ אפ */
+#closePopup{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 20px;
+    color: #ffffff; 
+    background-color: #203547; 
+    border-radius: 50%;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+
+/* הגדרות עיצוב לטופס צור קשר */
+input[type=text], input[type=email] {
+    width: calc(100% - 25px); 
+    padding: 12px;
+    margin: 8px 0;
+    display: block;
+    border: 0.01px thin #000000;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #F5F1F1;
+}
+input[type=submit] {
+    background-color: #203547;
+    color: white;
+    padding: 11px 18px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 78px;
+    cursor: pointer;
+    width: 100px;
+    float: left;
+}
+input[type=submit]:hover {
+    background-color: #92AEBD;
+}
+
+
+/* הגדרות עיצוב לקרוסלת תמונות של טעימות מהמוצרים */
+
+* {box-sizing:border-box}
+
+/* קונטיינר של קרוסלת התמונות */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+
+.mySlides {
+  display: none;
+}
+
+/* הגדרות עיצוב לכפתורי הבא והקודם בסליידר */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: #00000023;
+}
+
+/* ממקם את כפתור הבא לצד ימין */
+.next {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+
+/* הגדרות עיצוב לנקודות חיווי */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* הגדרות עיצוב למעבר הסליידר */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+

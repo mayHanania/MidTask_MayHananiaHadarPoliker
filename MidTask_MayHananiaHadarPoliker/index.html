@@ -1,0 +1,179 @@
+﻿<!doctype html>
+<html lang="he" dir="rtl">
+
+<head>
+    <meta charset="utf-8" />
+    <title>עמוד הבית חברת אמרל</title>
+    <link rel="icon" href="./images/Amarel_logo_Tab.png" type="image/x-icon">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- CSS -->
+    <link href="styles/reset.css" rel="stylesheet" />
+    <link href="styles/styles.css" rel="stylesheet"/>
+
+    <!-- JS -->
+    <link href="styles/bootstrap.rtl.min.css" rel="stylesheet" />
+    <script src="jScripts/javascript.js"></script>
+</head>
+
+<body>
+  
+
+            <div class="container">
+                <nav>
+                    <button id="nav-button" class="btn-mobile" onclick="toggleNav()"><img src="images/המבורגר.png"
+                            alt="ניווט"></button>
+                    <ul id="main-nav" class="flex-container-nav hide-mobile">
+                        <button id="close-nav-button" class="btn-mobile" onclick="toggleNav()"><img src="images/close- nav-new.png"
+                                alt="סגירה"></button>
+                                <img src="./images/amarel_logo_white.png" alt="Amarel Logo" id="nav-logo">
+
+                        <li><a href="#">דף הבית</a></li>
+                        <li><a href="#">אודות</a></li>
+                        <li><a href="#">שירותים ותחומי התמחות</a></li>
+                        <li><a href="#">חומרי העשרה</a></li>
+                        <li><a href="#"> בלוג</a></li>
+
+                    </ul>
+                </nav>
+<header>
+    <img src="./images/סטריפ.jpg" alt="strip" id="strip">
+    <h1 id="mainTitle">ברוכים הבאים לחברת אמרל</h1> 
+</header>
+   
+        <main>          
+            <button id="darkModeToggle" onclick="toggleDarkMode()">החשך מסך</button>  
+            <p>חברת אמרל מספקת שירותים מקצועיים לתעשיות יצרניות וטכנולוגיות בארץ ובעולם.  
+                החברה מציעה סל שירותים משלימים לליבת עיסוקי הלקוח במגוון רחב של תחומים לאורך מחזור חיי המוצר או הפרוייקט.</p>
+                <br/>
+                <h2>המוצרים שלנו:</h2>
+                <br/>
+            <!-- פה יוצגו המערכות -->
+            <div id="itemsContainer">
+    
+            </div>
+    
+        
+        </main>
+            
+       
+
+     
+<!-- קרוסלת תמונות -->
+
+<h2 id="ourProdectSlide">טעימות מהמוצרים:</h2>               
+<div class="slideshow-container">
+
+    <!-- תמונות שנמצאות בתוך הסליידר עם חיווי למספר התמונה ותיאור -->
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 1</div>
+      <img src="./images/טעימות לומדות.jpg" alt="טעימות מלומדות" style="width:100%">
+      <div class="text">לומדות</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 2</div>
+      <img src="./images/טעימות מציאות מדומה.jpg" alt="טעימות מציאות מדומה" style="width:100%">
+      <div class="text">מציאות מדומה</div>
+    </div>
+  
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 3</div>
+      <img src="./images/טעימות משחוק.jpg" alt="טעימות משחוק" style="width:100%">
+      <div class="text">משחוק</div>
+    </div>
+
+    <div class="mySlides fade">
+        <div class="numbertext">5 / 4</div>
+        <img src="./images/טעימות סרטוני אנימציה.jpg" alt="טעימות סרטוני אנימציה" style="width:100%">
+        <div class="text">סרטוני אנימציה</div>
+      </div>
+
+      <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="./images/טעימות קורסים מקוונים.jpg" alt="טעימות מקורסים מקוונים" style="width:100%">
+        <div class="text">קורסים מקוונים</div>
+      </div>
+  
+   <!-- חצי נייוט לסליידר -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- נקודות חיווי לסליידר  -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+  </div>
+
+
+   <!-- כפתור לפתיחת חלונית צור קשר -->
+    <button class="connect-btn" onclick="openPopup()">צור קשר</button>
+
+    <!-- טופס צור קשר -->
+    <div class="overlay" id="overlay">
+        <div class="popup">
+            <span id="closePopup" onclick="closePopup()">&times;</span>
+            <h2>צור איתנו קשר!</h2>
+            <form onsubmit="return validateForm()">
+                <label for="fname">שם מלא:</label>
+                <input type="text" id="fname" name="fullname"  required>
+
+                <label for="phone">טלפון ליצירת קשר:</label>
+                <input type="text" id="phone" name="phone"  required>
+
+                <label for="message"> הודעה קצרה:</label>
+                <input type="text" id="message" name="message" required>
+
+                <input type="submit" value="שלח">
+            </form>
+        </div>
+    </div>
+
+        <div id="clients">
+
+            <h2> הלקוחות שלנו:</h2>
+        <div class="client-carousel">
+            <div class="client-logos" id="clientLogos">
+                <img src="./images/align_logo 1.png" alt="align_logo">
+                <img src="./images/hapoalim_logo 1.png" alt="hapoalim_logo">
+                <img src="./images/hp_logo 1.png" alt="hp_logo">
+                <img src="./images/iai_logo 1.png" alt="iai_logo">
+                <img src="./images/shfir_logo 1.png" alt="shfir_logo">
+                <img src="./images/netafim 1.png" alt="netafim">
+                <img src="./images/לוגו רכבת ישראל.png" alt="railways_logo">
+                <img src="./images/FLIGHT-MEDICAL_logo.png" alt="FLIGHT-MEDICAL_logo">
+                <img src="./images/roboTeam_logo 1.png" alt="roboTeam_logo">
+
+
+               
+            </div>
+        </div>
+
+        </div>
+        
+
+   
+    </div>
+    </div>
+
+    <footer>
+       
+        <img src="./images/סטריפ.jpg" alt="strip" id="strip">
+        <p>זכויות יוצרים:
+            התמונות נלקחו מאתר:freepik
+        </p>
+    </footer>
+  
+</body>
+
+
+</html>
